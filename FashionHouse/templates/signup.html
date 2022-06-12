@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<title>Roy-Tex | Signup</title>
+{% endblock %}
+{% block body %}
+<section id="form">
+	<!--form-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="signup-form">
+					<!--sign up form-->
+					<h2>New User Signup!</h2>
+					<form action="{% url 'signup' %}" method="post">
+                        {% csrf_token %}
+						<input type="text" name="fname" id="" placeholder="First Name" />
+						<input type="text" name="lname" id="" Placeholder="Last Name">
+						<input type="email" name="email" id="" placeholder="E-mail" />
+						<input type="text" name="username" id="" placeholder="Username">
+						<input type="password" name="password" id="" placeholder="Password" />
+						<button type="submit" class="btn btn-default">Signup</button>
+					</form>
+				</div>
+				<!--/sign up form-->
+			</div>
+		</div>
+	</div>
+</section>
+<!--/form-->
+{% endblock %}
