@@ -108,7 +108,11 @@
                                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                 <li><a href="{% static 'checkout' %}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                                 <li><a href="{% static 'cart' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                {% if not user.is_authenticated %}
                                 <li><a href="{% url 'login' %}"><i class="fa fa-lock"></i> Login</a></li>
+                                {% else%}
+                                <li><a href="{% url 'logout' %}"><i class="fa fa-lock"></i> Logout</a></li>
+                                {% endif %}
                             </ul>
                         </div>
                     </div>
@@ -140,7 +144,11 @@
                                         <li><a href="{% static 'product_details' %}">Product Details</a></li>
                                         <li><a href="{% static 'checkout' %}">Checkout</a></li>
                                         <li><a href="{% static 'cart' %}">Cart</a></li>
+                                        {% if not user.is_authenticated %}
                                         <li><a href="{% url 'login' %}">Login</a></li>
+                                        {% else%}
+                                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                                        {% endif %}
 
                                     </ul>
                                 </li>
