@@ -138,10 +138,10 @@
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
                                 <li><a href="{% url 'home' %}" class="active">Home</a></li>
-                                <li class="dropdown"><a href="{% static 'shop' %}">Shop<i class="fa fa-angle-down"></i></a>
+                                <li class="dropdown"><a href="{% url 'shop' %}">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="{% static 'shop' %}">Products</a></li>
-                                        <li><a href="{% static 'product_details' %}">Product Details</a></li>
+                                        <li><a href="{% url 'shop' %}">Products</a></li>
+                                        <li><a href="{% url 'product_details' %}">Product Details</a></li>
                                         <li><a href="{% static 'checkout' %}">Checkout</a></li>
                                         <li><a href="{% static 'cart' %}">Cart</a></li>
                                         {% if not user.is_authenticated %}
